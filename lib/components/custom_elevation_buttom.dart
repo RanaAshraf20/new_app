@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:telda/pages/new_trasfer_page.dart';
 
 class CustomElevationButton extends StatelessWidget {
   const CustomElevationButton({
@@ -9,7 +10,9 @@ class CustomElevationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, NewTrasferPage.id);
+      },
       style: ElevatedButton.styleFrom(
           backgroundColor: Colors.black,
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
