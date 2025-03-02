@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telda/pages/add_new_contact.dart';
 import 'package:telda/pages/main_home_page.dart';
 import 'package:telda/pages/new_trasfer_page.dart';
 import 'package:telda/pages/search_page.dart';
@@ -16,7 +17,8 @@ class TeldaApp extends StatelessWidget {
     return MaterialApp(routes: {
       TransfersPage.id: (context) => TransfersPage(),
       NewTrasferPage.id: (context) => NewTrasferPage(),
-      SearchPage.id: (context) => SearchPage()
+      SearchPage.id: (context) => SearchPage(),
+      AddNewContact.id: (context) => AddNewContact()
     }, debugShowCheckedModeBanner: false, home: MainHomePage());
   }
 }

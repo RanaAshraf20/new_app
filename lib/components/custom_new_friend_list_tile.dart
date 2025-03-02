@@ -1,12 +1,23 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomNewFriendListTile extends StatelessWidget {
-  const CustomNewFriendListTile({
-    super.key,
-  });
-
+class CustomAddNewListTile extends StatelessWidget {
+  CustomAddNewListTile(
+      {super.key,
+      required this.text,
+      required this.circleAvatarColor,
+      this.isText = true,
+      this.icon,
+      this.iconColor,
+      this.onTap});
+  final String text;
+  final Color circleAvatarColor;
+  bool? isText;
+  IconData? icon;
+  Color? iconColor;
+  void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,18 +27,28 @@ class CustomNewFriendListTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: ListTile(
-        leading: CircleAvatar(
-          backgroundColor: Colors.grey.withValues(alpha: 0.1),
-          child: Text(
-            '~',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+        leading: GestureDetector(
+          onTap: onTap,
+          child: CircleAvatar(
+              backgroundColor: circleAvatarColor,
+              child: isText!
+                  ? Text(
+                      '~',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  : Icon(
+                      icon,
+                      color: iconColor,
+                      size: 20,
+                    )),
         ),
-        title: Text('Telda friend'),
+        title: Text(
+          text,
+        ),
       ),
     );
   }

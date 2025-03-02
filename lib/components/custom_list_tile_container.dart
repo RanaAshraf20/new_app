@@ -18,7 +18,7 @@ class CustomListTileContainer extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 10,
+          height: 15,
         ),
         CustomContactListTile(
           itemCount: itemCount,

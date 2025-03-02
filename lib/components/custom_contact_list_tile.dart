@@ -22,23 +22,49 @@ class CustomContactListTile extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         padding: EdgeInsets.all(0),
         itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            leading: CircleAvatar(
-                backgroundColor: Colors.grey.withValues(alpha: 0.1),
-                child: Icon(
-                  Icons.person,
-                  color: Colors.black,
-                )),
-            title: Text(
-              'Omar Mostafa',
-              style: TextStyle(fontSize: 18),
-            ),
-            subtitle: Text(
-              '+201033215895',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
-            ),
+          return CustomThreeListTile(
+            icon: Icons.person,
+            iconColor: Colors.black,
+            title: 'Omar Mostafa',
+            subTitle: '+201022557725',
+            circleAvatarColor: Colors.grey.withValues(alpha: 0.1),
           );
         },
+      ),
+    );
+  }
+}
+
+class CustomThreeListTile extends StatelessWidget {
+  const CustomThreeListTile({
+    super.key,
+    required this.icon,
+    required this.iconColor,
+    required this.title,
+    required this.subTitle,
+    required this.circleAvatarColor,
+  });
+  final IconData icon;
+  final Color iconColor;
+  final String title;
+  final String subTitle;
+  final Color circleAvatarColor;
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(
+          backgroundColor: circleAvatarColor,
+          child: Icon(
+            icon,
+            color: iconColor,
+          )),
+      title: Text(
+        title,
+        style: TextStyle(fontSize: 18),
+      ),
+      subtitle: Text(
+        subTitle,
+        style: TextStyle(fontSize: 16, color: Colors.grey),
       ),
     );
   }

@@ -22,7 +22,10 @@ class CustomNewTransfersAllListView extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        CustomNewFriendListTile(),
+        CustomAddNewListTile(
+          text: 'Telda friend',
+          circleAvatarColor: Colors.grey.withValues(alpha: 0.1),
+        ),
         SizedBox(
           height: 30,
         ),
