@@ -12,7 +12,7 @@ class NewTrasferPage extends StatelessWidget {
       backgroundColor: Colors.white.withValues(alpha: 0.97),
       body: Padding(
         padding:
-            const EdgeInsets.only(right: 20.0, left: 20, top: 60, bottom: 30),
+            const EdgeInsets.only(right: 20.0, left: 20, top: 50, bottom: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

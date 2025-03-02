@@ -5,20 +5,22 @@ import 'package:flutter/material.dart';
 class CustomContactListTile extends StatelessWidget {
   const CustomContactListTile({
     super.key,
+    required this.itemCount,
   });
-
+  final int itemCount;
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 8),
+      padding: EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
       ),
       child: ListView.builder(
-        itemCount: 10,
+        itemCount: itemCount,
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.all(0),
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             leading: CircleAvatar(

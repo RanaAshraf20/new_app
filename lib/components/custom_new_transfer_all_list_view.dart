@@ -23,10 +23,30 @@ class CustomNewTransfersAllListView extends StatelessWidget {
         ),
         CustomNewFriendListTile(),
         SizedBox(
-          height: 40,
+          height: 30,
         ),
+        CustomListTileContainer(text: 'Telda friends', itemCount: 3),
+        SizedBox(
+          height: 30,
+        ),
+        CustomListTileContainer(text: 'Other', itemCount: 10)
+      ],
+    );
+  }
+}
+
+class CustomListTileContainer extends StatelessWidget {
+  const CustomListTileContainer(
+      {super.key, required this.text, required this.itemCount});
+  final String text;
+  final int itemCount;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
         Text(
-          'Telda friends',
+          text,
           style: TextStyle(
             fontSize: 18,
           ),
@@ -34,7 +54,9 @@ class CustomNewTransfersAllListView extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        CustomContactListTile()
+        CustomContactListTile(
+          itemCount: itemCount,
+        ),
       ],
     );
   }
