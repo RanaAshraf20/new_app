@@ -17,15 +17,14 @@ class CustomInsightsSubTitleRow extends StatelessWidget {
             style: TextStyle(color: Colors.blueGrey[400], fontSize: 15),
           ),
           Spacer(),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, EditCategoriesPage.id);
-            },
-            child: Text(
-              'Manage categories',
-              style: TextStyle(color: Colors.indigoAccent, fontSize: 15),
-            ),
-          ),
+          TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, EditCategoriesPage.id);
+              },
+              child: Text(
+                'Manage categories',
+                style: TextStyle(color: Colors.indigoAccent, fontSize: 15),
+              )),
         ],
       ),
     );
