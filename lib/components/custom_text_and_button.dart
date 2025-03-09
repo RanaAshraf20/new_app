@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telda/components/custom_button.dart';
+import 'package:telda/helper/responsive.dart';
 
 class CustomTextAndButton extends StatelessWidget {
   const CustomTextAndButton({
@@ -25,7 +26,7 @@ class CustomTextAndButton extends StatelessWidget {
               style: TextStyle(fontSize: 16, color: textButtonColor),
             )),
         SizedBox(
-          width: 22,
+          width: SizeConfig.screenWidth! * 0.02,
         ),
         CustomButton(
             text: buttonText, buttonColor: buttonColor, textColor: Colors.white)

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:telda/pages/add_new_contact.dart';
+import 'package:telda/pages/edit_categories_page.dart';
+
+import 'package:telda/pages/insights_page.dart';
+
 import 'package:telda/pages/main_home_page.dart';
 import 'package:telda/pages/new_trasfer_page.dart';
 import 'package:telda/pages/search_page.dart';
@@ -18,7 +21,8 @@ class TeldaApp extends StatelessWidget {
       TransfersPage.id: (context) => TransfersPage(),
       NewTrasferPage.id: (context) => NewTrasferPage(),
       SearchPage.id: (context) => SearchPage(),
-      AddNewContact.id: (context) => AddNewContact()
+      InsightsPage.id: (context) => InsightsPage(),
+      EditCategoriesPage.id: (context) => EditCategoriesPage(),
     }, debugShowCheckedModeBanner: false, home: MainHomePage());
   }
 }

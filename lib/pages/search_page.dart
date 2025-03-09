@@ -7,7 +7,6 @@ import 'package:telda/components/custom_list_tile_container.dart';
 import 'package:telda/components/custom_new_friend_list_tile.dart';
 import 'package:telda/components/custom_search_page_list_view.dart';
 import 'package:telda/components/search_page_search_bar.dart';
-import 'package:telda/pages/add_new_contact.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({
