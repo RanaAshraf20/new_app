@@ -15,7 +15,11 @@ class InsightsBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CloseIcon(),
+        CloseIcon(
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
         Expanded(
           child: ListView(
             padding: const EdgeInsets.only(top: 20),

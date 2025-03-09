@@ -10,7 +10,8 @@ class CustomButton extends StatelessWidget {
       this.edgeInsets =
           const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       this.textSize = 18,
-      this.fullWidth = false});
+      this.fullWidth = false,
+      this.onTap});
   final String text;
   double? raduis;
   Color? textColor;
@@ -18,17 +19,21 @@ class CustomButton extends StatelessWidget {
   EdgeInsets? edgeInsets;
   double? textSize;
   final bool fullWidth;
+  void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: fullWidth ? double.infinity : null,
-      padding: edgeInsets,
-      decoration: BoxDecoration(
-          color: buttonColor, borderRadius: BorderRadius.circular(raduis!)),
-      child: Text(
-        textAlign: TextAlign.center,
-        text,
-        style: TextStyle(color: textColor, fontSize: textSize),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: fullWidth ? double.infinity : null,
+        padding: edgeInsets,
+        decoration: BoxDecoration(
+            color: buttonColor, borderRadius: BorderRadius.circular(raduis!)),
+        child: Text(
+          textAlign: TextAlign.center,
+          text,
+          style: TextStyle(color: textColor, fontSize: textSize),
+        ),
       ),
     );
   }

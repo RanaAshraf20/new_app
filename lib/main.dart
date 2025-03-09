@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:telda/pages/bottom_sheet_page.dart';
 import 'package:telda/pages/edit_categories_page.dart';
+import 'package:telda/pages/home_page.dart';
 
 import 'package:telda/pages/insights_page.dart';
 
@@ -23,6 +25,8 @@ class TeldaApp extends StatelessWidget {
       SearchPage.id: (context) => SearchPage(),
       InsightsPage.id: (context) => InsightsPage(),
       EditCategoriesPage.id: (context) => EditCategoriesPage(),
+      BottomSheetPage.id: (context) => BottomSheetPage(),
+      HomePage.id: (context) => HomePage()
     }, debugShowCheckedModeBanner: false, home: MainHomePage());
   }
 }

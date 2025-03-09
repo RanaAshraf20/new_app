@@ -16,7 +16,11 @@ class NewTrasferPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CloseIcon(),
+            CloseIcon(
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
             SizedBox(
               height: 14,
             ),

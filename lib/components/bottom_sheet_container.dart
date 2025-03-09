@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:telda/pages/bottom_sheet_page.dart';
 
 class BottomSheetContainer extends StatelessWidget {
   BottomSheetContainer({
@@ -16,7 +17,9 @@ class BottomSheetContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, BottomSheetPage.id);
+      },
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
         decoration: BoxDecoration(
