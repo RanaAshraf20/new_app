@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:telda/components/add_note_bottom_sheet.dart';
 import 'package:telda/components/custom_circle_avatar.dart';
 import 'package:telda/components/custom_circle_avatar_with_border.dart';
 import 'package:telda/pages/insights_page.dart';
@@ -16,7 +17,18 @@ class RowOfCircleAvatars extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         CustomCircleAvatar(
-            onTap: () {},
+            onTap: () {
+              showModalBottomSheet(
+                  backgroundColor: Colors.white.withValues(alpha: 0.96),
+                  isScrollControlled: true,
+                  useSafeArea: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  context: context,
+                  builder: (context) {
+                    return AddNoteBottomSheet();
+                  });
+            },
             backgoundColor: Colors.black,
             icon: FontAwesomeIcons.plus,
             iconColor: Colors.white,

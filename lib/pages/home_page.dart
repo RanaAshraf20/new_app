@@ -47,12 +47,12 @@ class _HomePageState extends State<HomePage> {
           Text(
             'EGP0',
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 35,
               fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(
-            height: 8,
+            height: 4,
           ),
           CustomHideAndShowComponent(),
           SizedBox(
