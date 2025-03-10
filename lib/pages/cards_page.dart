@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:telda/components/custom_app_bar.dart';
 import 'package:telda/components/custom_button.dart';
 import 'package:telda/components/custom_column_image_and_text.dart';
+import 'package:telda/pages/get_your_card.dart';
 
 class CardsPage extends StatelessWidget {
   const CardsPage({super.key});
@@ -25,6 +26,9 @@ class CardsPage extends StatelessWidget {
             flex: 1,
           ),
           CustomButton(
+            onTap: () {
+              Navigator.pushNamed(context, GetYourCard.id);
+            },
             fullWidth: true,
             edgeInsets:
                 const EdgeInsets.symmetric(horizontal: 60, vertical: 12),
